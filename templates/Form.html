@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}Form page {% endblock %}
+
+{% block content %}
+
+                    <div id="main">
+                  <section class="split contact">
+
+                  {% if error_massages %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <strong class="text-danger">Error !! </strong> {{ error_massages }}
+
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+
+                    
+                  {% elif success_massage %}
+                    <div class="alert alert-success" role="alert">
+                      We have recived your data successfully <a href="#" class="alert-link">an example link</a>. {{ success_massage }}
+                    </div>
+  
+                  {% endif %}
+
+                      <form class="main-form" action="/form" method="POST">
+                          <div class="form-group">
+                              <label for="example-text-input">Full Name</label>
+                                <input class="form-control" type="text" placeholder="Name" name="user_name" value="{{ name }}" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="example-text-input">Company</label>
+                                <input class="form-control" type="text" placeholder="Company Name" name="company_name" value="{{ company }}" required>
+                            </div>
+                          <div class="form-group">
+                            <label for="example-email-input">Email address</label>
+                            <input type="email" class="form-control" id="example-email-input" aria-describedby="emailHelp" placeholder="example@email.com" name="email_add" value="{{ email }}" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your data with anyone.</small>
+                          </div>
+                          <div class="form-group">
+                              <label for="exampleFormControlTextarea1">Subject</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text_area" value="{{ latter }}"></textarea>
+                            </div>
+                         
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>         
+                      </section>
+<!--                       
+Copyright
+              <div id="copyright">
+                  <ul><li>&copy; alialian2020</li><li>Design: <a href="https://www.linkedin.com/in/ali-alian-b00214b9/">ali alian</a></li></ul>
+              </div> -->
+
+      </div>
+
+
+{% endblock %}
+                 
