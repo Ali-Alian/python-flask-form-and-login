@@ -23,20 +23,20 @@
       <h2 class="form-signin-heading">Login</h2>
      
       
-      <!-- {{ wtf.form_field(form.username) }} -->
-      <label for="exampleInputEmail1">Email</label>
+      {{ wtf.form_field(form.username) }}
+      <!-- <label for="exampleInputEmail1">Username</label>
       <input type="text" class="form-control" name="username" id="exampleInputEmail1" required autofocus>
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
       <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
-    </div>
-      <!-- {{ wtf.form_field(form.password) }} -->
+    </div> -->
+      {{ wtf.form_field(form.password) }}
       {{ form.hidden_tag() }}
       {{ wtf.form_field(form.remember) }}
       <div class="form-group">
-      <a href="{{ url_for('register')}}"> Sign up </a>
+      <a href="{{ url_for('register_page.register')}}"> Sign up </a>
     </div>
       <!-- 
     <div class="form-group form-check">

@@ -1,7 +1,13 @@
 
 {% extends 'base.html' %}
 {% block title %}chetahran {% endblock %}
-{% block nav %}<li><a href="{{ url_for('login')}}">logout</a></li>{% endblock %}
+{% block nav %}
+
+<li><a href="{{ url_for('logout_page.logout')}}">logout</a></li>
+
+
+
+{% endblock %}
 
 
 
